@@ -8,7 +8,7 @@ git clone https://github.com/Phoenix-Education-Project/team9repo
 
 python -m venv “venv”
 .\venv\Scripts\activate (для Linux: source ./venv/bin/activate)
-Все последующие действия с Django производить внутри виртуального окружения
-Установите все необходимые зависимости для работы Django
+Все последующие действия производить внутри виртуального окружения
+Установите все необходимые зависимости для работы 
 
 pip install -r requirements.txt
