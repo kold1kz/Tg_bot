@@ -3,7 +3,7 @@
 Склонируйте репозиторий
 
 git clone https://github.com/Phoenix-Education-Project/team9repo
-1) Настройка Django
+1) Настройка
 В корне проекта создайте виртуальное окружение и активируйте его
 
 python -m venv “venv”
