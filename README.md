@@ -5,7 +5,7 @@
 
 Склонируйте репозиторий:
 
-git clone https://github.com/Phoenix-Education-Project/team9repo
+git clone https://github.com/kold1kz/Tg_bot.git
 
 Настройка В корне проекта создайте виртуальное окружение и активируйте его:
 python -m venv “venv”
