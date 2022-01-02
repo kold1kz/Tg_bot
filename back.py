@@ -1,5 +1,6 @@
 import datetime,requests
 from config import weather_token
+from aiogram.utils.helper import Helper, HelperMode, ListItem
 
 
 class weather:
@@ -47,5 +48,9 @@ class weather:
         except:
             return ("\U00002620 Пожалуйста проверь написанние своего города \U00002620")
 
-    def inputCity(mes):
-        pass
+class TestStates(Helper):
+    mode = HelperMode.snake_case
+
+    TEST_STATE_0 = ListItem()
+    TEST_STATE_1 = ListItem()
+    TEST_STATE_2 = ListItem()
