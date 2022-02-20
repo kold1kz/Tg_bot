@@ -43,9 +43,10 @@ async def first_test_state_case_met(message: types.Message):
         if (len(message.text)==5 and int(message.text[:2])>-1 and int(message.text[:2]) < 25 and int(message.text[3:]) >-1 and int(message.text[3:]) <61): 
             db.set_time(message.from_user.id, message.text)
             await bot.send_message(message.from_user.id, "Теперь в это время тебе будет приходить прогноз погоды на день))", reply_markup=nav.mainMenu)
+            db.update_subscription(message.from_user.id, True)
             state = dp.current_state(user=message.from_user.id)
             await state.reset_state()
-        
+            
             if (db.get_user_city(message.from_user.id)[0][0]==0):
                 await bot.send_message(message.from_user.id, "Выберите свой город", reply_markup = nav.cityMenu)
     
@@ -191,5 +192,4 @@ if __name__ == "__main__":
     loop.create_task(scheduled(60))
     # Запуск бота
     executor.start_polling(dp, skip_updates =True, on_shutdown=shutdown)
-    db.close()
-    
+    db.close() 
